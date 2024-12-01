@@ -1,1 +1,6 @@
 # AoC
+
+- Why ? algorithmic culture, Github init...
+- with Who ? the community, other university students and staff, friends...
+- a Method ? improving Python programming skills by implementing everything from A to Z or learning libraries ?
+- how can I get in the habit of benchmarking my results ?
