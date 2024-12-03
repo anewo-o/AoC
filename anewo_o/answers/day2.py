@@ -1,6 +1,6 @@
 # Day 2: Directed inner-Connexity-Congruence of lists
 
-with open("day2.txt", "r") as f:
+with open("anewo_o/inputs/day2.txt", "r") as f:
     data = f.read().splitlines()
 
 # preprocessing

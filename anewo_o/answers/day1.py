@@ -3,7 +3,7 @@
 
 # Part 1
 
-with open("day1.txt", "r") as f:
+with open("anewo_o/inputs/day1.txt", "r") as f:
     data = f.read().split()
     L1 = sorted([int(i) for i in data[::2]])
     L2 = sorted([int(i) for i in data[1::2]])
