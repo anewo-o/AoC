@@ -1,7 +1,6 @@
+"""
 import numpy as np
 import scipy.ndimage as ndi
-
-"""
 with open("anewo_o/inputs/day4.txt", "r") as file:
     horiz = np.array([ list(line) for line in file.read().splitlines()])
     vert = horiz.transpose()
