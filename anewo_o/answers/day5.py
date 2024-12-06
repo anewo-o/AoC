@@ -28,10 +28,58 @@ for update in updates:
 print("Answer 1:", sum(mids))
 
 
+
 # Part 2
 
-ans = 0
+"""
+    my idea:
+        - define a partial order in Python
+        - sort accordingly: topological sort? 
+                                (ChatGPT + William Y.Feng)
+"""
 
-###
+from collections import defaultdict
+# avoid key errors when accessing or updating the in-degree of nodes
 
-print("Answer 2: ", ans)
+
+def topological_sort(update):
+    """
+    Credits to William Y.Feng for inspo
+    - applied rules
+    - in-degree
+    - topo sort
+    """
+
+    # select useful rules
+    applied_rules = []
+    for [page1, page2] in rules:
+        if page1 in update and page2 in update:
+            applied_rules.append([page1, page2])
+    # count the number of incoming "edges" for each node
+    in_degree = defaultdict(int)
+    for [page1, page2] in applied_rules:
+        in_degree[page2] += 1
+    
+    new = []
+    # topological sort
+    while len(new) < len(update):
+        for page in update:
+            if page in new:
+                continue
+            if in_degree[page] <= 0:
+                new.append(page)
+                for [page1, page2] in applied_rules:
+                    if page1 == page:
+                        in_degree[page2] -= 1
+
+    return new
+
+
+mids = []
+for update in updates:
+    new = topological_sort(update)
+    if update == new :
+        continue
+    mids.append(new[len(new) // 2])
+
+print("Answer 2: ", sum(mids))
