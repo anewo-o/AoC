@@ -58,7 +58,7 @@ Should work but answer is too high ?
 
 import re
 
-with open("anewo_o/inputs/day3.txt", "r") as f:
+with open("anewo_o/inputs/day03.in", "r") as f:
     data = f.read()
 
 # Regex pattern to match "mul(XXX,XXX)" where XXX is a number

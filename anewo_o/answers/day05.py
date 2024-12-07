@@ -1,6 +1,6 @@
 DEBUG = False
 
-with open("anewo_o/inputs/day5.txt", "r") as f:
+with open("anewo_o/inputs/day05.in", "r") as f:
     data = f.read().split("\n\n")
     rules = [[int(page) for page in rule.split("|")]\
               for rule in data[0].splitlines()]

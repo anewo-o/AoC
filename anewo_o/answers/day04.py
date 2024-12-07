@@ -7,7 +7,7 @@ with open("anewo_o/inputs/day4.txt", "r") as file:
     ...rotate 45° ??
 """
 
-with open("anewo_o/inputs/day4.txt", "r") as f:
+with open("anewo_o/inputs/day04.in", "r") as f:
     data = f.read().splitlines()
 
 
